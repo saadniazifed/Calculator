@@ -100,7 +100,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 5px;
 }
 
 .miscellnaious-row button {
