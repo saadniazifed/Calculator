@@ -4,6 +4,7 @@ const operators = document.querySelectorAll(".operators");
 const equals = document.querySelector(".equals");
 const buttons = document.querySelectorAll("button");
 const clearBtn = document.querySelector(".clear");
+const backSpaceBtn = document.querySelector(".backSpaceButton");
 
 // functions for all of the basic math operators
 function add(firstNum, secondNum) {

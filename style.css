@@ -78,28 +78,35 @@ button {
 
 .top-row button {
     flex: 1 1 auto;
+    border-radius: 15px;
+
 }
 
 .middle-row button {
     margin-top: 10px;
     flex: 1 1 auto;
+    border-radius: 15px;
+
 }
 
 .bottom-row button {
     margin-top: 10px;
     flex: 1 1 auto;
+    border-radius: 15px;
+
 }
 
 .miscellnaious-row {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 5px;
 }
 
 .miscellnaious-row button {
     flex: 1 1 auto;
     margin-top: 10px;
+    border-radius: 15px;
 }
 
 
@@ -113,5 +120,5 @@ button {
 }
 
 .equals, .clear {
-    background-color: crimson;
+    background-color: lightseagreen;
 }
