@@ -53,11 +53,12 @@ operators.forEach((operator) => {
     operatorChoice = operator.value;
     display.textContent = operatorChoice;
     flag = true;
-
-    if (flag == true) {
-      dotBtn.disabled = true;
-    }
+    dotBtn.disabled = false;
   });
+});
+
+dotBtn.addEventListener("click", () => {
+  dotBtn.disabled = true;
 });
 
 // Numbers are selected based on the given condition of the boolean Flag.
