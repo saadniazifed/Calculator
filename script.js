@@ -4,8 +4,8 @@ const operators = document.querySelectorAll(".operators");
 const equals = document.querySelector(".equals");
 const buttons = document.querySelectorAll("button");
 const clearBtn = document.querySelector(".clear");
-const backSpaceBtn = document.querySelector(".backSpaceButton");
-
+const backSpaceButton = document.querySelector(".backSpaceButton");
+const dotBtn = document.querySelector("#dotBtn");
 // functions for all of the basic math operators
 function add(firstNum, secondNum) {
   return +firstNum + +secondNum;
@@ -50,8 +50,13 @@ let flag = false;
 // Operator is selected using this method.
 operators.forEach((operator) => {
   operator.addEventListener("click", () => {
-    operatorChoice = display.textContent = operator.value;
+    operatorChoice = operator.value;
+    display.textContent = operatorChoice;
     flag = true;
+
+    if (flag == true) {
+      dotBtn.disabled = true;
+    }
   });
 });
 
@@ -60,14 +65,25 @@ numbers.forEach((number) => {
   number.addEventListener("click", () => {
     if (flag == true) {
       // After the operator is clicked, store the value in secondNum
-      secondNum += parseFloat(number.value);
-      display.textContent += parseInt(number.value);
+      secondNum += number.value;
+      display.textContent += number.value;
     } else {
       // Otherwise keep on storing it in firstNum.
-      firstNum += parseFloat(number.value);
+      firstNum += number.value;
       display.textContent = firstNum;
     }
   });
+});
+
+// BackSpace Button.
+backSpaceButton.addEventListener("click", () => {
+  if (flag == true) {
+    secondNum = display.textContent.slice(0, -1);
+    display.textContent = secondNum;
+  } else {
+    firstNum = display.textContent.slice(0, -1);
+    display.textContent = firstNum;
+  }
 });
 
 let result = 0;
@@ -77,7 +93,7 @@ let rounded = 0;
 equals.addEventListener("click", () => {
   if (equals.value == "=") {
     result = operate(firstNum, secondNum, operatorChoice);
-    rounded = Number(result.toFixed(3));
+    rounded = parseFloat(result.toFixed(3));
     display.textContent = rounded;
     // Rounding off to the nearest 3 digits after the decimal.
 
