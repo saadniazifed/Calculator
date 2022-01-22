@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 37px;
+
+}
+
+h1 {
+    font-family: Poppins;
+    color: white;
+    font-size: 45px;
+}
+
+html {
+    background: #100a1c;
+    background-image:
+        radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0, 0, 0, 0) 100%),
+        radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+    background-attachment: fixed;
+    color: #6cacc5;
+}
+
+
+#main-container {
+    border: 2px solid black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#calculator {
+    padding: 20px;
+    border-radius: 10%;
+    height: 55vh;
+    width: 65vh;
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+#display {
+    border: 2px solid black;
+    width: 55.6vh;
+    height: 75px;
+    background-color: grey;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+button {
+    padding: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+
+.dp-btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.top-row, .middle-row, .bottom-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.top-row button {
+    flex: 1 1 auto;
+}
+
+.middle-row button {
+    margin-top: 10px;
+    flex: 1 1 auto;
+}
+
+.bottom-row button {
+    margin-top: 10px;
+    flex: 1 1 auto;
+}
+
+.miscellnaious-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.miscellnaious-row button {
+    flex: 1 1 auto;
+    margin-top: 10px;
+}
+
+
+
+.btn {
+    font-size: 18px;
+}
+
+.operators {
+    background-color: coral;
+}
+
+.equals, .clear {
+    background-color: crimson;
+}
