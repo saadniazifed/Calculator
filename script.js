@@ -57,6 +57,7 @@ operators.forEach((operator) => {
   });
 });
 
+// Disabling the decimal button once its clicked.
 dotBtn.addEventListener("click", () => {
   dotBtn.disabled = true;
 });
@@ -65,11 +66,9 @@ dotBtn.addEventListener("click", () => {
 numbers.forEach((number) => {
   number.addEventListener("click", () => {
     if (flag == true) {
-      // After the operator is clicked, store the value in secondNum
       secondNum += number.value;
       display.textContent += number.value;
     } else {
-      // Otherwise keep on storing it in firstNum.
       firstNum += number.value;
       display.textContent = firstNum;
     }
@@ -94,14 +93,10 @@ let rounded = 0;
 equals.addEventListener("click", () => {
   if (equals.value == "=") {
     result = operate(firstNum, secondNum, operatorChoice);
+    // Rounding off to the nearest 3 digits after the decimal.
     rounded = parseFloat(result.toFixed(3));
     display.textContent = rounded;
-    // Rounding off to the nearest 3 digits after the decimal.
 
-    // Once the calculation is done ONCE, disable all the buttons.
-    buttons.forEach((button) => {
-      button.disabled = true;
-    });
     // Disable all the buttons except for the Clear button.
     clearBtn.disabled = false;
 
@@ -109,6 +104,10 @@ equals.addEventListener("click", () => {
     if (firstNum > 0 && secondNum == 0 && operatorChoice == "/") {
       display.textContent = "TO INFINITY AND BEYOND! You can't divide by zero!";
     }
+
+    // To make the Calculator have more operations and numbers.
+    firstNum = result;
+    secondNum = 0;
   }
 });
 
