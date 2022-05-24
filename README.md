@@ -2,7 +2,7 @@
 
 A fully functional Calculator project which can be used in the browser.
 
-The fourth project in the Foundation section of [The Odin Project](https://www.theodinproject.com/).
+The fifth project in the Foundation section of [The Odin Project](https://www.theodinproject.com/).
 
 Spec and details for the assignment can be found [Here](https://www.theodinproject.com/lessons/foundations-calculator)
 
